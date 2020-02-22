@@ -31,7 +31,7 @@ export class AppController {
   getInformacion(@Response()res) {
     return res.render('informacion');
   }
-
+  /* funciones de ejemplo para llamar y guardar datos en la bd*/
     @Get('bargraph')
     async getbargraph(@Response()res) {
       const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});

@@ -7,8 +7,9 @@ import {InstitucionEntity} from "./Institucion/institucion.entity";
 
 @Module({
   imports: [
+   /*crear la conexion */
     InstitucionModule,
-    TypeOrmModule.forRoot(
+      TypeOrmModule.forRoot(
         {
           name: 'default', // Nombre cadena de Conex.
           type: 'mysql',
@@ -19,6 +20,7 @@ import {InstitucionEntity} from "./Institucion/institucion.entity";
           database: 'bd_formulario',
           dropSchema: false,
           entities: [
+           /*definir todas las tablas que se va a utilizar*/
             InstitucionEntity,
           ],
           synchronize: true, // Crear -> true , Conectar -> false
