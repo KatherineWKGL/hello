@@ -34,9 +34,9 @@ export class AppController {
   /* funciones de ejemplo para llamar y guardar datos en la bd*/
     @Get('bargraph')
     async getbargraph(@Response()res) {
-      const respuesta = await this.institucionService._repositorioUsuario.save({nomIns:'Prueba 1'});
+      const respuesta = await this.institucionService._repositorioInstitucion.save({nomIns:'Prueba 1'});
       console.log(respuesta)
-      const instituciones = await this.institucionService._repositorioUsuario.find();
+      const instituciones = await this.institucionService._repositorioInstitucion.find();
       return res.render('bargraph', {
         instituciones:instituciones
       });
